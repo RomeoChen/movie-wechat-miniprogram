@@ -1,0 +1,56 @@
+/* miniprogram/pages/home/home.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.a-movie {
+    padding-top: 20rpx;
+}
+.movie-image {
+    width: 600rpx;
+    height: 900rpx;
+}
+.movie-name {
+    font-size: 50rpx;
+    text-align: center;
+    padding-top: 20rpx;
+}
+.recommend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recommend-avatar {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+.recommend-text {
+    display: inline-block;
+    font-size: 30rpx;
+}
+
+.tabbar {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0rpx;
+    display: flex;
+    padding: 20rpx 0;
+    align-items: center;
+}
+.popular, .user {
+    font-size: 30rpx;
+    line-height: 60rpx;
+    color: #aaaaaa;
+    text-align: center;
+    width: 375rpx;
+}

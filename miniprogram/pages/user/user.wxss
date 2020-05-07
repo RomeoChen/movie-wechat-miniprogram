@@ -1,0 +1,90 @@
+/* miniprogram/pages/user/user.wxss */
+page {
+  background: #f6f6f6;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #d6d6d6;
+}
+.collected-comment, .released-comment {
+    text-align: center;
+    width: 375rpx;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+.collected-comment {
+    border-right: 1rpx solid #d6d6d6;
+}
+
+.whole-wrap {
+    padding: 40rpx;
+    margin-bottom: 100rpx;
+}
+
+.comment-item {
+    margin-bottom: 40rpx;
+    border: 1rpx solid #d6d6d6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.movie-image {
+    width: 200rpx;
+    height: 300rpx;
+}
+
+.right-info {
+    width: 460rpx;
+    height: 300rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30rpx;
+}
+.title {
+    padding-top: 20rpx;
+    font-size: 37rpx;
+    font-weight: bold;
+}
+.comment {
+    font-size: 35rpx;
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+.user-image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    background-color: white;
+    background-size: cover;
+}
+.nickName {
+    font-size: 35rpx;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    text-align: center;
+    padding: 50rpx 0rpx;
+    border-top: 1rpx solid #d6d6d6;
+    background-color: #e3e3e3;
+}
+.login-button {
+    background-color: rgba(94, 214, 24, 0.795);
+    color: white;
+    margin: 20rpx 100rpx;
+}
+
+.active {
+    color: white;
+    background-color: #d6d6d6;
+}

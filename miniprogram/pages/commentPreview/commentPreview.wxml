@@ -1,0 +1,19 @@
+<!--miniprogram/pages/commentPreview/commentPreview.wxml-->
+<view class='whole-wrap'>
+    <view class='card'>
+        <view class='image-title-user-comment'>
+            <image src='{{movie.imageUrl}}' mode='aspectFill' class='movie-img'></image>
+            <view class='title'>{{movie.title}}</view>
+            <view class='user'>
+                <image class='user-img' src='{{avatarUrl}}'></image>
+                <view class='user-name'>{{nickName}}的影评</view>
+            </view>
+            <view class='comment' wx:if="{{type==='text'}}">"  {{comment}}</view>
+            <button wx:else class='record' bindtap='playRecord'>播放录音</button>
+        </view>
+        <view class='button-group'>
+            <button bindtap='editAgain'>重新编辑</button>
+            <button bindtap='releaseComment'>发布影评</button>
+        </view>
+    </view>
+</view>

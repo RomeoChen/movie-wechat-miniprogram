@@ -1,0 +1,16 @@
+<!--miniprogram/pages/movieDetail/movieDetail.wxml-->
+<view class='whole-wrap'>
+    <view class='card'>
+        <view class='image-title-description'>
+            <image src='{{movie.imageUrl}}' mode='aspectFill'></image>
+            <view class='title'>{{movie.title}}</view>
+            <view class='description'>{{movie.description}}</view>
+        </view>
+        <view class='button-group'>
+            <button bindtap='toCommentList'>查看影评</button>
+            <button bindtap='addComment' wx:if="{{!openId}}" open-type='getUserInfo' bindgetuserinfo='onTapLogin'>登录</button>
+            <view wx:elif="{{hasCommented}}"></view>
+            <button bindtap='addComment' wx:else>添加影评</button>
+        </view>
+    </view>
+</view>

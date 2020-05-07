@@ -1,0 +1,15 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view wx:if="{{!comment}}">暂无评论~</view>
+<view class='a-movie' wx:else>
+    <image class='movie-image' src='{{comment.movieImageUrl}}' mode='aspectFit' bindtap='toMovieDetail'></image>
+    <view class='movie-name'>{{comment.title}}</view>
+    <view class='recommend' bindtap='toCommentDetail'>
+        <image class='recommend-avatar' src='{{comment.avatarUrl}}'></image>    
+        <view class='recommend-text'>{{commentnickName}}给你推荐了一步电影</view>
+    </view>
+</view>
+
+<view class='tabbar'>
+    <navigator class='popular' url='../movieList/movieList'>热门</navigator>
+    <navigator class='user' url='../user/user'>我的</navigator>
+</view>

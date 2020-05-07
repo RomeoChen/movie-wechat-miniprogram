@@ -1,0 +1,12 @@
+<!--miniprogram/pages/movieList/movieList.wxml-->
+<view class='whole-wrap'>
+    <view wx:for="{{movieList}}" wx:key="{{_id}}">
+        <view bindtap='toMovieDetail' data-id='{{item._id}}' class='movie-item'>
+            <image src='{{item.imageUrl}}'  mode="aspectFill"></image>
+            <view class='movie-info'>
+                <view class='title'>{{item.title}}</view>
+                <view class='category'>{{item.category}}</view>
+            </view>
+        </view>
+    </view>
+</view>

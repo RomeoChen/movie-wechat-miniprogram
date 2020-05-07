@@ -1,0 +1,47 @@
+/* miniprogram/pages/movieDetail/movieDetail.wxss */
+Page {
+    background: #f6f6f6;
+}
+
+.whole-wrap {
+    padding: 100rpx 40rpx;
+}
+
+.card {
+    border: 1rpx solid #d6d6d6;
+    background-color: white;
+    padding: 40rpx 50rpx;
+}
+
+.image-title-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -100rpx;
+}
+image {
+    width: 250rpx;
+    height: 350rpx;
+}
+.title {
+    font-weight: bold;
+    padding-top: 20rpx;
+    padding-bottom: 50rpx;
+}
+.description {
+    font-size: 30rpx;
+    padding: 20rpx 50rpx;
+    line-height: 50rpx;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 25rpx;
+    width: 200rpx;
+    background-color: white;
+}

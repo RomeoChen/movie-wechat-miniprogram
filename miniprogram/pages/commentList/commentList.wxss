@@ -1,0 +1,48 @@
+/* miniprogram/pages/commentList/commentList.wxss */
+Page {
+    background-color: #f2f2f2;
+}
+
+.comment {
+    border: 1rpx solid #d3d3d3;
+    background-color: white;
+    padding: 50rpx 100rpx;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    background-color: white;
+    background-size: cover;
+}
+
+.content {
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+
+.voice-image {
+    width: 300rpx;
+    height: 50rpx;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 0rpx;
+    text-align: center;
+    width: 100%;
+    line-height: 100rpx;
+    background-color: white;
+    border-top: 1rpx #d3d3d3;
+}
+
+.no-comment {
+    text-align: center;
+}

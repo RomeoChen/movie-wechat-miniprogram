@@ -1,0 +1,16 @@
+<!--miniprogram/pages/commentEdit/commentEdit.wxml-->
+<view class='whole-wrap'>
+    <view class='card'>
+        <view class='image-title-description'>
+            <image src='{{movie.imageUrl}}' mode='aspectFill'></image>
+            <view class='title'>{{movie.title}}</view>
+            <input placeholder='输入你的影评内容...' bindinput="bindInput" wx:if="{{type === 'text'}}">{{comment}}</input>
+            <view wx:else>
+                <button bindtap='startRecord' class='record'>开始录音</button>
+                <button bindtap='stopRecord' class='record'>结束录音</button>
+                <button bindtap='playRecord' class='record'>播放录音</button>
+            </view>
+        </view>
+    </view>
+    <view class='confirm-comment' bindtap='confirmEdit'>完成</view>
+</view>

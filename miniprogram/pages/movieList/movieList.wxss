@@ -1,0 +1,41 @@
+/* miniprogram/pages/movieList/movieList.wxss */
+page {
+  background: #f6f6f6;
+}
+
+.whole-wrap {
+    padding: 40rpx;
+}
+
+.movie-item {
+    margin-bottom: 40rpx;
+    border: 1rpx solid #d6d6d6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+image {
+    width: 200rpx;
+    height: 300rpx;
+}
+
+.movie-info {
+    width: 460rpx;
+    height: 300rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 30rpx;
+}
+
+.title {
+    padding-top: 40rpx;
+    font-size: 37rpx;
+    font-weight: bold;
+}
+
+.category {
+    padding-bottom: 40rpx;
+    font-size: 28rpx;
+}

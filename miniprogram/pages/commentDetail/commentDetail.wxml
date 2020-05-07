@@ -1,0 +1,20 @@
+<!--miniprogram/pages/commentDetail/commentDetail.wxml-->
+<view class='whole-wrap'>
+    <view class='card'>
+        <view class='image-title-comment'>
+            <image class='movie-img' src='{{comment.movieImageUrl}}' mode='aspectFill'></image>
+            <view class='title'>{{comment.title}}</view>
+            <view class='user'>
+                <image class='user-img' src='{{comment.avatarUrl}}'></image>
+                <view class='username'>{{comment.nickName}}的影评</view>
+            </view>
+            <view class='content' wx:if="{{comment.type==='text'}}">“   {{comment.content}}</view>
+            <button wx:else>播放语音</button>
+        </view>
+        <view class='button-group'>
+            <button bindtap='collectComment'>收藏影评</button>
+            <button bindtap='switchMyComment' wx:if="{{hasCommented}}">我的影评</button>
+            <button bindtap='writeComment' wx:else>写影评</button>
+        </view>
+    </view>
+</view>

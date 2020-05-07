@@ -1,0 +1,32 @@
+<!--miniprogram/pages/user/user.wxml-->
+<view wx:if="{{!userInfo}}">
+    <button class='login-button' open-type='getUserInfo' bindgetuserinfo='onTapLogin'>微信登录</button>
+</view>
+<view wx:else>
+    <view class='select' wx:if="{{currentTab === 'released'}}">
+        <view class='released-comment active' bindtap='showReleased'>发布的影评</view>
+        <view class='collected-comment' bindtap='showCollectd'>收藏的影评</view>
+    </view>
+    <view wx:else class='select'>
+        <view class='released-comment' bindtap='showReleased'>发布的影评</view>
+        <view class='collected-comment active' bindtap='showCollectd'>收藏的影评</view>
+    </view>
+    <scroll-view class='whole-wrap'>
+        <view wx:if="{{commentList.length > 0}}">
+            <view class='comment-item' wx:for="{{commentList}}" data-commentid='{{item._id}}' bindtap='toCommentDetail'>
+                <image src='{{item.movieImageUrl}}'  mode="aspectFill" class='movie-image'></image>
+                <view class='right-info'>
+                    <view class='title'>{{item.title}}</view>
+                    <view class='comment' wx:if="{{item.type==='text'}}">{{item.content}}</view>
+                    <button wx:else>播放录音</button>
+                    <view class='user'>
+                        <image src='{{item.avatarUrl}}' class='user-image'></image>
+                        <text class='nickName'>{{item.nickName}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class='no-comment'>还没有影评~</view>
+    </scroll-view>
+</view>
+<navigator url='../home/home' class='back-to-home' open-type='redirect'>回到首页</navigator>

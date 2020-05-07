@@ -1,0 +1,15 @@
+<!--miniprogram/pages/commentList/commentList.wxml-->
+<scroll-view class='comment-list' wx:if="{{commentList.length > 0}}">
+<view wx:for="{{commentList}}">
+    <view class='comment' bindtap='toCommentDetail' data-commentid='{{item._id}}'>
+        <view class='user'>
+            <image src='{{item.avatarUrl}}' class='avatar'></image>
+            <text>{{item.nickName}}</text>
+        </view>
+        <text class='content' wx:if="{{item.type === 'text'}}">{{item.content}}</text>
+        <button wx:else class='record' catchtap='playRecord' data-src='item.src'>播放录音</button>
+    </view>
+</view>
+</scroll-view>
+<view wx:else class='no-comment'>暂无影评~</view>
+<navigator class='back-to-home' url='../home/home' open-type='redirect'>回到首页</navigator>
